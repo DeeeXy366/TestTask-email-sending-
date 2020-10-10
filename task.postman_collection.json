@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "97bc9c71-ec5d-4821-a953-3f2d16aae69d",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f3db11bc-13d8-47c7-bc7d-e74a10f7d5e8",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "login",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "test",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "name",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "surname",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "maksim20011803@mail.ru",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{main}}store",
+					"host": [
+						"{{main}}store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "distroy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{main}}distroy/1",
+					"host": [
+						"{{main}}distroy"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{main}}index",
+					"host": [
+						"{{main}}index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "sdgsdg",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "dfgdfgdfg",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "maksim20000000@mail.ru",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{main}}update/2",
+					"host": [
+						"{{main}}update"
+					],
+					"path": [
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
